@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrumpROAR</title>
+  <link rel="icon" href="Frame 5 2.png" type="image/jpeg">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      position: relative;
+      font-family: 'Inria Serif', serif;
+    }
+    .background-container {
+      background-image: url('background12.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 550vh;
+      width: 100%;
+      z-index: 1;
+      position: absolute;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      position: relative;
+    }
+    .image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 350px;
+      height: 350px;
+      transition: transform 0.2s ease-out;
+      transform-origin: center center;
+      will-change: transform;
+      z-index: 2;
+    }
+    .image-button {
+      transition: transform 0.2s ease-out;
+      cursor: pointer;
+      z-index: 4;
+    }
+    #dex {
+      top: 675px;
+      left: 400px;
+      position: absolute;
+    }
+    #telegram {
+      top: 375px;
+      right: 400px;
+      position: absolute;
+    }
+    #twitter {
+      bottom: 475px;
+      left: 400px;
+      position: absolute;
+    }
+    #pumpfun {
+      bottom: 175px;
+      right: 400px;
+      position: absolute;
+    }
+    .styled-container, .styled-container2, .styled-container3, .styled-container4 {
+      padding: 40px;
+      border: 4px solid #000;
+      background-color: #e917172c;
+      border-radius: 50px;
+      text-align: center;
+      color: #000;
+      z-index: 5;
+    }
+    .styled-container {
+      position: absolute;
+      top: 900px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 750px;
+      height: auto;
+    }
+    .styled-container2 {
+      position: absolute;
+      top: 1300px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 750px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .button-container {
+      margin-top: 20px;
+    }
+    .image-with-stroke {
+      border: 4px solid #000;
+      border-radius: 32px;
+      margin-top: 10px;
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+    .image-with-stroke2 {
+      border: 4px solid #000;
+      border-radius: 32px;
+      width: 50px;
+      height: auto;
+    }
+    .countdown-container {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    .countdown-timer {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+    }
+    .styled-container3 {
+      position: absolute;
+      top: 2225px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 750px;
+      height: auto;
+    }
+    .inner-container {
+      width: 100%;
+      background-color: #eb0c0ca9;
+      border: 4px solid #000;
+      border-radius: 50px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 10px 0;
+    }
+    .styled-container3-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .styled-container4 {
+      position: absolute;
+      top: 3450px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 750px;
+      height: 750px;
+      overflow: hidden;
+    }
+    .slideshow-container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 1s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+    @media (max-width: 768px) {
+      .image {
+        width: 250px;
+        height: 250px;
+      }
+      #dex, #telegram, #twitter, #pumpfun {
+        width: 80px;
+        height: 80px;
+      }
+      .styled-container, .styled-container2, .styled-container3, .styled-container4 {
+        padding: 20px;
+        border-radius: 30px;
+      }
+      .styled-container h1 {
+        font-size: 24px;
+      }
+      .inner-container h2 {
+        font-size: 18px;
+      }
+    }
+    @media (max-width: 480px) {
+      .image {
+        width: 150px;
+        height: 150px;
+      }
+      #dex, #telegram, #twitter, #pumpfun {
+        width: 60px;
+        height: 60px;
+      }
+      .styled-container, .styled-container2, .styled-container3, .styled-container4 {
+        padding: 10px;
+        border-radius: 20px;
+      }
+      .styled-container h1 {
+        font-size: 20px;
+      }
+      .inner-container h2 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-container">
+    <div class="container">
+      <img src="TrumpStretch 1.png" alt="Example Image" class="image" />
+    </div>
+  </div>
+  <a href="">
+    <img id="dex" class="image-button" src="dexscreener 2.png" alt="Button 1" width="100" height="100">
+  </a>
+  <a href="https://t.me/+xZzcMfrsZIAwOTRk">
+    <img id="telegram" class="image-button" src="icon-park_telegram.png" alt="Button 2" width="100" height="100">
+  </a>
+  <a href="https://x.com/RoarTrump84619">
+    <img id="twitter" class="image-button" src="mage_x.png" alt="Button 3" width="100" height="100">
+  </a>
+  <a href="">
+    <img id="pumpfun" class="image-button" src="pumpfun.png" alt="Button 4" width="100" height="100">
+  </a>
+  <div class="styled-container">
+    <h3>Address: Coming Soon!</h3>
+    <div class="countdown-container">
+      <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+      <a href="https://logwork.com/countdown-fkz1" class="countdown-timer" data-timezone="Europe/Bucharest" data-textcolor="#000000" data-date="2024-08-03 22:00" data-background="#000000" data-digitscolor="#ffffff" data-unitscolor="#000000">Coin Launch</a>
+    </div>
+  </div>
+  <div class="styled-container2">
+    <div>
+      <h2>Join Trump's<br>Journey In The</br></h2>
+      <h1>CRYPTO<br>MARKET</br></h1>
+      <img class="image-with-stroke" src="Frame 5 2.png" alt="Example Image with Stroke">
+    </div>
+    <div class="button-container">
+      <a href="">
+        <img id="button1" class="image-button" src="button1.png" alt="Button 5" width="300" height="75">
+      </a>
+    </div>
+  </div>
+  <div class="styled-container3">
+    <h1 style="font-size: 80px;">Trumpenomics</h1>
+    <div class="styled-container3-wrapper">
+      <div class="inner-container">
+        <h2>Token Name: To Be Announced</h2>
+      </div>
+      <div class="inner-container">
+        <h2>Blockchain: SOLANA</h2>
+      </div>
+      <div class="inner-container">
+        <h2>NO TAX: 0/0</h2>
+      </div>
+      <div class="inner-container">
+        <h2>Initial Supply: 1 Billion</h2>
+      </div>
+      <div class="inner-container">
+        <h2>Circulating Supply: 1 Billion</h2>
+      </div>
+      <div class="inner-container">
+        <h2>Liquidity: BURNED</h2>
+      </div>
+    </div>
+  </div>
+  <div class="styled-container4">
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="Frame 5 2.png" alt="Slide Image">
+      </div>
+      <div class="slide">
+        <img src="meme1.png" alt="Slide Image">
+      </div>
+      <div class="slide">
+        <img src="meme2.png" alt="Slide Image">
+      </div>
+      <div class="slide">
+        <img src="meme3.png" alt="Slide Image">
+      </div>
+      <div class="slide">
+        <img src="meme4.png" alt="Slide Image">
+      </div>
+      <div class="slide">
+        <img src="meme5.png" alt="Slide Image">
+      </div>
+      <div class="slide">
+        <img src="meme6.png" alt="Slide Image">
+      </div>
+    </div>
+  </div>
+  <script>
+    const image = document.querySelector('.image');
+    const container = document.querySelector('.container');
+
+    container.addEventListener('mousemove', (e) => {
+      const { clientX: mouseX, clientY: mouseY } = e;
+      const { offsetWidth: containerWidth, offsetHeight: containerHeight } = container;
+
+      const centerX = containerWidth / 2;
+      const centerY = containerHeight / 2;
+
+      const deltaX = mouseX - centerX;
+      const deltaY = mouseY - centerY;
+
+      // Calculate scale based on the distance from the center
+      const distance = Math.sqrt(deltaX**2 + deltaY**2);
+      const scaleFactor = 1 + distance / 500; // Adjust divisor to change scaling sensitivity
+
+      // Calculate translation based on the mouse position
+      const xOffset = deltaX / 20; // Adjust divisor to change movement sensitivity
+      const yOffset = deltaY / 20; // Adjust divisor to change movement sensitivity
+
+      // Apply the transform to move and scale the image
+      image.style.transform = `translate(-50%, -50%) translate(${xOffset}px, ${yOffset}px) scale(${scaleFactor})`;
+    });
+    
+    document.querySelectorAll('.image-button').forEach(button => {
+      button.addEventListener('mousemove', (e) => {
+        const { clientX: mouseX, clientY: mouseY } = e;
+        const { offsetWidth: buttonWidth, offsetHeight: buttonHeight } = button;
+        const centerX = buttonWidth / 2;
+        const centerY = buttonHeight / 2;
+        const deltaX = mouseX - centerX;
+        const deltaY = mouseY - centerY;
+        const distance = Math.sqrt(deltaX**2 + deltaY**2);
+        const scaleFactor = 1 + distance / 500;
+        const xOffset = deltaX / 20;
+        const yOffset = deltaY / 20;
+        button.style.transform = `translate(${xOffset}px, ${yOffset}px) scale(${scaleFactor})`;
+      });
+
+      button.addEventListener('mouseleave', () => {
+        button.style.transform = 'translate(0, 0) scale(1)';
+      });
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.styled-container4 .slide');
+  const totalSlides = slides.length;
+  let currentIndex = 0;
+  const slideInterval = 3000; // Time in milliseconds for each slide to change (e.g., 3000ms = 3s)
+
+  function updateSlide() {
+    const slideWidth = slides[0].clientWidth;
+    document.querySelector('.styled-container4 .slideshow-container').style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
+
+  function goToNextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlide();
+  }
+
+  setInterval(goToNextSlide, slideInterval);
+
+  window.addEventListener('resize', updateSlide); // Adjust for window resize
+});
+
+  </script>
+</body>
+</html>
