@@ -1,0 +1,248 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+.background-container {
+  background-image: url('assets/background12.jpg'); /* Update path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 700vh; /* Adjust as needed */
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.a-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* position: relative; */
+}
+.image {
+  width: 70vw; /* Use viewport units for responsive width */
+  max-width: 350px;
+  height: auto;
+  transition: transform 0.2s ease-out;
+  transform-origin: center center;
+  will-change: transform;
+}
+.image-buttonn {
+  width: 15vw; /* Responsive width */
+  max-width: 100px;
+  height: auto;
+  transition: transform 0.2s ease-out;
+  cursor: pointer;
+}
+
+.image-buttonn:hover {
+  transform: scale(1.1);
+}
+
+#dex, #telegram, #twitter, #pumpfun {
+  position: absolute;
+  width: 15vw;
+  max-width: 100px;
+  height: auto;
+}
+
+#dex { top: 20%; left: 10%; }
+#telegram { top: 20%; right: 10%; }
+#twitter { bottom: 20%; left: 10%; }
+#pumpfun { bottom: 20%; right: 10%; }
+
+.styled-cont{
+  left: 25% !important;
+}
+
+.styled-container {
+  position: absolute;
+  top: 80vh;
+  left: 10%;
+  width: 80%;
+  max-width: 750px;
+  padding: 20px;
+  border: 4px solid #000;
+  background-color: rgba(233, 23, 23, 0.17);
+  border-radius: 50px;
+  text-align: center;
+  font-family: 'Inria Serif', serif;
+  font-size: 2.5vw; /* Responsive font size */
+  color: #000;
+}
+
+.styled-container2 {
+  position: absolute;
+  top: 150vh;
+  left: 10%;
+  width: 80%;
+  max-width: 750px;
+  padding: 30px;
+  border: 4px solid #000;
+  background-color: rgba(233, 23, 23, 0.17);
+  border-radius: 50px;
+  text-align: center;
+  font-family: 'Inria Serif', serif;
+  font-size: 2.5vw; /* Responsive font size */
+  color: #000;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+.image-with-stroke {
+  /* border: 4px solid #000; */
+  border-radius: 32px;
+  width: 80vw; /* Responsive width */
+  max-width: 400px;
+  height: auto;
+}
+.image-with-stroke2 {
+  /* border: 4px solid #000; */
+  border-radius: 32px;
+  max-width: 300px; 
+  height: auto;
+}
+
+.image-with-stroke2:hover {
+  transform: scale(1.1);
+}
+
+.countdown-container {
+  text-align: center;
+  width: 100%; /* Responsive width */
+  height: auto;
+}
+
+.countdown-timer {
+  font-size: 4vw; /* Responsive font size */
+}
+.styled-container3 {
+  position: absolute;
+  top: 310vh;
+  left: 23%;
+  /* width: 100%; */
+  max-width: 750px;
+  padding: 20px;
+  border: 4px solid #000;
+  background-color: rgba(233, 23, 23, 0.17);
+  border-radius: 50px;
+  text-align: center;
+  font-family: 'Inria Serif', serif;
+  font-size: 2.5vw; /* Responsive font size */
+  color: #000;
+  z-index: 5;
+  min-height: 1000px; /* Ensure container is tall enough */
+}
+.inner-container {
+  width: 100%;
+  /* padding: 10px; */
+  background-color: #eb0c0c;
+  border: 4px solid #000;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.styled-container4 {
+  position: absolute;
+  top: 350vh;
+  left: 10%;
+  width: 80%;
+  max-width: 750px;
+  padding: 20px;
+  border: 4px solid #000;
+  background-color: rgba(233, 23, 23, 0.17);
+  border-radius: 50px;
+  text-align: center;
+  font-family: 'Inria Serif', serif;
+  font-size: 2.5vw; /* Responsive font size */
+  color: #000;
+  z-index: 5;
+  height: auto; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.slideshow-container {
+  display: flex;
+  overflow: hidden;
+  width: 600px; /* Fixed width */
+  height: 600px;
+  position: absolute;
+  left: 30%;
+  border: #000 4px solid;
+  border-radius: 15%;
+  top: 560vh;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .image-buttonn, #dex, #telegram, #twitter, #pumpfun {
+    width: 25vw; /* Larger buttons on smaller screens */
+  }
+  .styled-container, .styled-container2, .styled-container3, .styled-container4 {
+    font-size: 4vw; /* Adjust font size */
+    width: 90%;
+    top: auto; /* Remove absolute positioning */
+    left: auto;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-buttonn, #dex, #telegram, #twitter, #pumpfun {
+    width: 40vw; /* Even larger buttons on very small screens */
+  }
+  .styled-container{
+      position: absolute;
+      left: 2% !important;
+      top: 90%;
+      width: 79%;
+  }
+  .styled-container2{
+      left: 3% !important;
+      width: 70%;
+      top: 125%;
+  }
+  .styled-container3{
+      left: 3% !important;
+      width: 75%;
+      top: 245%;
+  }
+  .styled-container3 h1
+  .inner-container{
+      width: 90%;
+  }
+  .styled-container4{
+      left: 5% !important;
+      width: 75%;
+      top: 265%;
+    }
+    .slideshow-container{
+      left: 5%;
+      width: 90%;
+      top: 420%;
+    /* top: 270%; */
+  }
+  .styled-container, .styled-container2, .styled-container3, .styled-container4 {
+    font-size: 5vw; /* Further adjust font size */
+  }
+}
