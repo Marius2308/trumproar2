@@ -174,7 +174,7 @@ html, body {
   display: flex;
   overflow: hidden;
   width: 600px; /* Fixed width */
-  height: 600px;
+  height: auto;
   position: absolute;
   left: 30%;
   border: #000 4px solid;
